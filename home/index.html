@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic|Playfair+Display:400,700&subset=latin,cyrillic">
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
- <link rel="stylesheet" type="text/css" href="main.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
+
+ <link rel="stylesheet" href="main.css"/>
 <script>
 window.onload = function() {
 
@@ -33,43 +30,56 @@ window.onload = function() {
 </script>
 
 </head>
-<body>
-<form id="registerform" action="/action_page.php">
-  <div class="container">
-    <h1>Регистрация</h1>
-    <p>Пожалуйста заполните форму ниже, чтобы создрать аккаунт.</p>
-    <hr>
+  <header id="header-background">
+   <div class="logo"></div>
+  </header>
 
-    <label for="email"><b>Email</b></label>
+<body>
+<form action="https://www.almau.edu.kz">
+  <div class="flex-container">
+  
+    <h1>Регистрация в AlmaU
+    <p>Пожалуйста заполните форму ниже, чтобы создать аккаунт.</p>
+    <hr>
+    <div class="grid-container">
+    <label for="email"><div>E-mail</div></label>
+    </div>
+    <div class="info">
     <input type="text" id="textfield" placeholder="Введите Email" name="email" required class="validate">
-    
-    <label for="email"><b>Номер Телефона</b></label>
-    <input id="telNo" name="telNo" type="tel"
+    </div>
+    <div class="grid-container">    
+    <label for="email"><div>Номер Телефона</div></label>
+    </div>
+    <input id="telNo" name="telNo" type="text"
            placeholder="+7"
            pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
            size="12" minlength="12" maxlength="12"
            required class="validate" autocomplete="on">
-
+<div class="grid-container"> 
     <label for="psw"><b>Пароль</b></label>
-    
+  </div>  
     <input type="password" id="password" placeholder="Введите Пароль" name="psw" 
     size="12" minlength="12" maxlength="12"
     required="required">
-
+<div class="grid-container"> 
     <label for="psw-repeat"><b>Повторите Пароль</b></label>
+      </div>  
     <input type="password" placeholder="Введите Пароль" name="psw-repeat"
         size="12" minlength="12" maxlength="12"
     required="required">
     <hr>
+    
     <p>Вы соглашаетесь с <a href="#">Условием Пользования</a>.</p>
+    
 
-    <button type="submit" class="registerbtn" onclick="user1()">Регистрация</button>
+    <button id="myButton" type="submit" class="registerbtn">Регистрация</button>
   </div>
   
-  <div class="container signin">
+  <div class="flex-container signin">
     <p>Уже есть аккаунт? <a href="#">Войти</a>.</p>
   </div>
 </form>
-
+  <footer>2018</footer>
+  </h1>
 </body>
 </html>
